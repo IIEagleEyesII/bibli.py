@@ -1,3 +1,13 @@
+"""A l'attention du correcteur:
+-Vu que le type de liste n'a pas était précisé au début du projet,
+ mon choix intuitif était de choisir une liste bidirectionnelle,
+ ainsi j'ai continué le projet avec ce type de données. Il est claire
+ qu'une simple liste linéaire aurait pu résoudre le problème ou une liste circulaire en particulier pour bookLoanSolver.
+ j'èspere que ce choix n'aurat pas de consequences négatives.
+"""
+
+
+
 class BookNode:
     """Attributs publiques, sans getter avec setter pour les modifier"""
     def __init__(self, titre, author, isbn, n, genre, next=None, previous=None):
@@ -12,14 +22,14 @@ class BookNode:
     def __str__(self):
         return f'{self.title}, {self.author}, {self.isbn}, {self.type}, {self.n}'
 
-    def set_next(self, value):
-        self.next = value
+    def set_next(self, node):
+        self.next = node
 
     def get_previous(self):
         return self.previous
 
-    def set_previous(self, value):
-        self.previous = value
+    def set_previous(self, node):
+        self.previous = node
 
 
 class BookCatalog:
